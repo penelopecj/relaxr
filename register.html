@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="The perfect personal assistant. Relaxr does your job for you so you can enjoy life as it is meant to be.">
+
+		<title>Relaxr - Register</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,600,800' rel='stylesheet' type='text/css'>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1 class="logo">Relaxr</h1>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section id="signup">
+			<div class="container">
+				<section id="register">
+					<span>
+						<h2>Create a new account</h2>
+					</span>
+					<p id="error-msg"></p>
+					<form action="" method="POST">
+						<span>
+							<input placeholder="First name" name="firstName" type="text" id="firstName">
+							<input placeholder="Surname" name="lastName" type="text" id="lastName">
+						</span>
+						<span>
+							<input placeholder="Email" name="email" type="email" id="email" class="details">
+						</span>
+						<span>
+							<input placeholder="Password"  name="password" type="password" id="password">
+						</span>
+						<span>
+							<h5>Date of birth</h5>
+						</span>
+						<span>
+							<input name="dob" type="date" id="dob">
+						</span>
+						<span>
+							<h5>Gender</h5>
+						</span>
+						<span>
+							<input name="gender" type="radio" id="female">
+							<label for="male">Female &#9792</label>
+							<input name="gender" type="radio" id="male">
+							<label for="male"><strong>Male &#9794</strong></label>
+							<input name="gender" type="radio" id="custom">
+							<label for="custom">Custom</label>
+						</span>
+						<span>
+							<h5>Upload your profile photo</h5>
+						</span>
+						<span>
+							<input name="prof-pic" type="file" id="prof-pic">
+						</span>
+						<input id="submit-btn" type="submit" href="#" value="Register Now">
+					</form>
+				</section>
+			</div>
+		</section>
+
+		<footer>
+			<h4 class="logo">Relaxr</h4>
+
+			<ul>
+				<li><a href="https://twitter.com/" target="_blank"><img src="images/twitter.png" alt="Twitter logo"></a></li>
+				<li><a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook logo"></a></li>
+			</ul>
+
+			<p class="copyright">Copyright 2015. Relaxr.</p>
+		</footer>
+
+		<script>
+			let submitBtn = document.querySelector("#submit-btn")
+			let errorMsg = document.querySelector("#error-msg")
+			submitBtn.addEventListener("click", function(event) {
+				event.preventDefault()
+				errorMsg.textContent = "Sorry, the Ultra Exclusive Club of Relaxr Users is currently full. Please try again later."
+			})
+			event.preventDefault()
+		</script>
+	</body>
+</html>

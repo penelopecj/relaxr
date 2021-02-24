@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaxr - Contact</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Relaxr</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="signup">
+			<div class="container">
+				<section id="register">
+					<span>
+						<h2>Contact Us</h2>
+					</span>
+					<p id="error-msg"></p>
+					<form action="" method="POST">
+						<span>
+							<input placeholder="First name" name="firstName" type="text" id="firstName">
+							<input placeholder="Surname" name="lastName" type="text" id="lastName">
+						</span>
+						<span>
+							<input placeholder="Email" name="email" type="email" class="details">
+						</span>
+						<span>
+							<input placeholder="Subject"  name="subject" type="text" class="details">
+						</span>
+						<span>
+							<h5>Write your message below:</h5>
+                        </span>
+                        <span>
+                            <textarea  rows="10"></textarea>
+                        </span>
+                        <span>
+                        <input id="submit-btn" type="submit" href="#" value="Send">
+                        </span>
+					</form>
+				</section>
+			</div>
+		</section>
+    </main>
+
+    <footer>
+        <h4 class="logo">Relaxr</h4>
+
+        <ul>
+            <li><a href="https://twitter.com/" target="_blank"><img src="images/twitter.png" alt="Twitter logo"></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook logo"></a></li>
+        </ul>
+
+        <p class="copyright">Copyright 2015. Relaxr.</p>
+    </footer>
+
+    <script>
+        let submitBtn = document.querySelector("#submit-btn")
+        let errorMsg = document.querySelector("#error-msg")
+        submitBtn.addEventListener("click", function(event) {
+            event.preventDefault()
+            errorMsg.textContent = "Sorry, the Relaxr Management Team is very busy and cannot be contacted right now. Please try again later."
+        })
+    </script>
+</body>
+</html>
